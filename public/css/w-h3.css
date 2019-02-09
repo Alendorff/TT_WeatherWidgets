@@ -1,0 +1,45 @@
+.w {
+    border: 1px solid #999999;
+    width: 320px;
+    height: 140px;
+}
+.w-h3-degrees-top {
+    font-size: 32px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.w-h3-icon-top {
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url('img/wether-icons/snow.ico');
+}
+
+.w-h3-icon-bot {
+    height: 42px;
+    width: 42px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.w-h3-city, .w-h3-date-top {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.w-h3-city-date {
+    margin-top: 12px;
+    font-weight: bolder;
+}
+
+.w-h3-date-bot {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.w-h3-degrees-bot {
+    margin-top: 10px;
+    font-size: 18px;
+}

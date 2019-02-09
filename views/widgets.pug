@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Weather widget service
+        // bootstrap css from cdn
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+        link(rel='stylesheet', href='/css/widget-page.css')
+        // bootstrap and jquery from cdn
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+
+        script(src='/js/app.js')
+    body
+        .container
+            .page-header
+                h1 Мои виджеты
+            .row
+                .widget-edit-form.col-xs-12
+                    .edits
+                        .col-xs-12.col-sm-4
+                            label.widget-edit-label(for='setWidgetCity') Город:
+                            select#setWidgetCity.form-control
+                                option Москва
+                                option Санкт-Петербург
+                                option Нижний Новгород
+                        .col-xs-12.col-sm-4
+                            label.widget-edit-label(for='setWidgetDays') Прогноз на:
+                            select#setWidgetDays.form-control
+                                option(value='1') На сегодня
+                                option(value='3') На 3 дня
+                                option(value='7') На неделю
+                        .col-xs-12.col-sm-4
+                            label.widget-edit-label(for='setWidgetOrientation') Ориентация виджета:
+                            select#setWidgetOrientation.form-control
+                                option Вертикальная
+                                option Горизонтальная
+                            button#createWidget.btn.btn-success(type='button') Создать
+                .widgets.col-xs-12
+                    if (widgets && widgets.length)
+                        - var wSrc;
+                        - var js = 'javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";o.style.width=o.contentWindow.document.body.scrollWidth+"px";}(this));';
+                        - var style = "border:none;overflow:hidden;";
+                        each w in widgets
+                            - wSrc = `/widgets/${w.id}`;
+                            .widget-contaier
+                                .widget-controls(id=w.id)
+                                    span.code-btn
+                                    span.edit-btn
+                                    span.remove-btn
+                                br
+                                iframe(src=wSrc onload=js style=style data-id=w.id data-city=w.city data-days=w.days data-orientation=w.orientation)
+
+

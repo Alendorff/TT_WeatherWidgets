@@ -1,0 +1,31 @@
+.w {
+	border: 1px solid #999999;
+	width: 190px;
+	height: 190px;
+}
+
+.w-v-city {
+	text-align: center;
+	font-size: 18px;
+	margin-top: 4px;
+	text-decoration: underline;
+}
+
+.w-v-degrees, .w-v-date {
+	text-align: right;    
+	padding-right: 20px;
+	font-weight: bolder;    
+	font-size: 16px; 
+}
+
+.w-v-icon {
+	height: 48px;
+	width: 48px;
+	overflow: hidden;
+	background-size: cover;
+	margin-left: 14px;
+}
+
+hr.separator {
+	margin: 0 0 4px 0;
+}

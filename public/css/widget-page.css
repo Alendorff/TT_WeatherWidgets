@@ -1,0 +1,49 @@
+#createWidget {
+	float: right;
+	margin-top: 5px;
+}
+
+.widget-edit-label {
+	margin-top: 3px;
+}
+
+.widgets {
+	margin-top: 5px;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+    left: 15px;
+	z-index: 100;
+	border-top: 0;
+	background-color: #fff;
+}
+
+
+.widget-controls>span{
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    overflow: hidden;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.code-btn{
+    background-image: url('/img/control-icons/code.ico');
+    margin-right: 3px;
+}
+
+.edit-btn{
+    background-image: url('/img/control-icons/edit.ico');
+}
+
+.remove-btn{
+    background-image: url('/img/control-icons/remove.ico');
+}
+
+.widget-contaier,.widget-controls {
+    display: inline-block;
+}
+

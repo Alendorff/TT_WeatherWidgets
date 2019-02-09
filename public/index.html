@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>weather widget service</title>
+        <!-- bootstrap css from cdn -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/widget-page.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Мои виджеты</h1>
+            </div>
+            <div class="row widget-container">
+                <div class="col-xs-12 col-sm-4 col-md-2 widget-edit-form">
+                    <label class="widget-edit-label" for="setWidgetCity">Город:</label>
+                    <select class="form-control" id="setWidgetCity">
+                        <option>Москва</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Нижний Новгород</option>
+                    </select>
+                    
+                    <label class="widget-edit-label" for="setWidgetDays">Прогноз на:</label>
+                    <select class="form-control" id="setWidgetDays">
+                        <option value="1">На сегодня</option>
+                        <option value="3">На 3 дня</option>
+                        <option value="7">На неделю</option>
+                    </select>
+
+                    <label class="widget-edit-label" for="setWidgetOrientation">Ориентация виджета:</label>
+                    <select class="form-control" id="setWidgetOrientation">
+                        <option>Вертикальная</option>
+                        <option>Горизонтальная</option>
+                    </select>    
+
+                    <button type="button" class="btn btn-success" id="createWidget">Создать</button>                
+                </div>
+            </div>
+        </div>
+
+        <!-- bootstrap and jquery from cdn -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="/js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title #{city} - Погода.
+        // bootstrap css from cdn
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+        link(rel='stylesheet', href='/css/w-h3.css')
+    body
+        .w
+            .row.w-h3-top
+                .col-xs-3
+                    - var iconStyle = "background-image: url('/img/weather-icons/" + days[0].icon + ".ico');";
+                    .w-h3-icon-top(style=iconStyle)
+                .col-xs-3.w-h3-degrees-top #{days[0].t}°C
+                .col-xs-6
+                    .row.w-h3-city-date
+                        .col-xs-12.w-h3-city #{city}
+                        .col-xs-12.w-h3-date-top #{days[0].date}
+            .row.w-h3-bot
+                each day in days.slice(1)
+                    .col-xs-6
+                        .col-xs-12.w-h3-date-bot #{day.date}
+                        .col-xs-4
+                            - iconStyle = "background-image: url('/img/weather-icons/" + day.icon + ".ico');";
+                            .w-h3-icon-bot(style=iconStyle)
+                        .col-xs-8.w-h3-degrees-bot
+                            | #{day.t}°C

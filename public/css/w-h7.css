@@ -1,0 +1,48 @@
+.w {
+    border: 1px solid #999999;
+    width: 710px;
+    height: 166px;
+}
+
+.w-h7-degrees-top {
+    font-size: 64px;
+    padding-left: 10px;
+}
+
+.w-h7-icon-top {
+    margin-top: 2px;
+    margin-left: 20px;
+    height: 90px;
+    width: 90px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.w-h7-city, .w-h7-date-top {
+    text-align: right;
+    font-size: 32px;
+    padding-right: 24px;
+}
+
+.w-h7-date-bot {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.w-h7-degrees-bot {
+    margin-top: 10px;
+    margin-left: -12px;
+    font-size: 16px;
+    font-size: 16px;
+}
+
+.w-h7-icon-bot {
+    height: 42px;
+    width: 42px;
+    overflow: hidden;
+    background-size: cover;
+    margin-left: -12px;
+}

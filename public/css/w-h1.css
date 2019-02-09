@@ -1,0 +1,28 @@
+.w {
+    border: 1px solid #999999;
+    width: 220px;
+    height: 120px;
+}
+
+.w-h1-degrees {
+    font-size: 32px;
+    margin-top: 15px;
+    padding-right: 20px;
+}
+
+.w-h1-weather-row {
+    height: 70px;
+    text-align: right;
+}
+
+.w-h1-city-row, .w-h1-date-row {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.w-h1-icon {
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    background-size: cover;
+}
